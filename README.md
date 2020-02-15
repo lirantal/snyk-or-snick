@@ -9,7 +9,6 @@
 <p align="center">
   <a href="https://www.npmjs.org/package/snyk-or-snick"><img src="https://badgen.net/npm/v/snyk-or-snick" alt="npm version"/></a>
   <a href="https://www.npmjs.org/package/snyk-or-snick"><img src="https://badgen.net/npm/license/snyk-or-snick" alt="license"/></a>
-  <a href="https://www.npmjs.org/package/snyk-or-snick"><img src="https://badgen.net/npm/dt/snyk-or-snick" alt="downloads"/></a>
   <a href="https://circleci.com/gh/lirantal/security-report"><img src="https://circleci.com/gh/lirantal/security-report.svg?style=svg" alt="build"/></a>
   <a href="https://snyk.io/test/github/lirantal/snyk-or-snick"><img src="https://snyk.io/test/github/lirantal/snyk-or-snick/badge.svg" alt="Known Vulnerabilities"/></a>
   <a href="./SECURITY.md"><img src="https://img.shields.io/badge/Security-Responsible%20Disclosure-yellow.svg" alt="Responsible Disclosure Policy" /></a>
