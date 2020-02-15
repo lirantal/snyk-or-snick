@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+/* eslint-disable node/shebang */
 import Readline from 'readline'
 import React from 'react'
 import { Color, render } from 'ink'
