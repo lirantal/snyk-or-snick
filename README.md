@@ -10,38 +10,35 @@
   <a href="https://www.npmjs.org/package/snyk-or-snick"><img src="https://badgen.net/npm/v/snyk-or-snick" alt="npm version"/></a>
   <a href="https://www.npmjs.org/package/snyk-or-snick"><img src="https://badgen.net/npm/license/snyk-or-snick" alt="license"/></a>
   <a href="https://www.npmjs.org/package/snyk-or-snick"><img src="https://badgen.net/npm/dt/snyk-or-snick" alt="downloads"/></a>
-  <a href="https://travis-ci.org/lirantal/snyk-or-snick"><img src="https://badgen.net/travis/lirantal/snyk-or-snick" alt="build"/></a>
-  <a href="https://codecov.io/gh/lirantal/snyk-or-snick"><img src="https://badgen.net/codecov/c/github/lirantal/snyk-or-snick" alt="codecov"/></a>
+  <a href="https://circleci.com/gh/lirantal/security-report"><img src="https://circleci.com/gh/lirantal/security-report.svg?style=svg" alt="build"/></a>
   <a href="https://snyk.io/test/github/lirantal/snyk-or-snick"><img src="https://snyk.io/test/github/lirantal/snyk-or-snick/badge.svg" alt="Known Vulnerabilities"/></a>
   <a href="./SECURITY.md"><img src="https://img.shields.io/badge/Security-Responsible%20Disclosure-yellow.svg" alt="Responsible Disclosure Policy" /></a>
 </p>
 
 # About
 
-snyk-or-snick
+Is it Snyk or Snick?
 
-Race your friend to the Snyk palace
+Who knows 🤷‍♂️
 
-# Install
-
-```bash
-npm install --save snyk-or-snick
-```
+But now you can race your friend for it straight from the CLI!
 
 # Usage
 
-```js
-// @TODO
-const {} = require('snyk-or-snick')
+How to play the game?
+
+```bash
+npx snyk-or-snick
 ```
 
-# Example
+- Snyk player uses the keyboard key `s`
+- Snick player uses the keyboard key `'`
 
-<!-- TODO -->
+Press the keys like a mad-man until you hit 100% progress and win the right pronunciation 🎉
 
 # Contributing
 
-Please consult [CONTIRBUTING](./CONTRIBUTING.md) for guidelines on contributing to this project.
+Please consult [CONTRIBUTING](./CONTRIBUTING.md) for guidelines on contributing to this project.
 
 # Author
 
