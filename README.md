@@ -14,6 +14,12 @@
   <a href="./SECURITY.md"><img src="https://img.shields.io/badge/Security-Responsible%20Disclosure-yellow.svg" alt="Responsible Disclosure Policy" /></a>
 </p>
 
+<p align="center">
+  <img src="https://repository-images.githubusercontent.com/240784348/f9656900-5050-11ea-8fa7-1beb17decd04" alt="Screenshot of snyk or snick pronunciation game" />
+  <p align="center">
+  	<p align="center">Made with 💜 to all Snykers</a> </p>
+</p>
+
 # About
 
 Is it Snyk or Snick?
