@@ -1,5 +1,7 @@
 'use strict'
 
+var _readline = _interopRequireDefault(require('readline'))
+
 var _react = _interopRequireDefault(require('react'))
 
 var _ink = require('ink')
@@ -43,7 +45,27 @@ class App extends _react.default.Component {
     )
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    _readline.default.emitKeypressEvents(process.stdin)
+
+    process.stdin.setRawMode(true)
+    process.stdin.on('keypress', (key, data) => {
+      if (data.ctrl && data.name === 'c') {
+        process.exit()
+      } else {
+        this.setState(prevState => {
+          if (prevState.progress >= 100) {
+            console.log('you win!')
+            process.exit(1)
+          }
+
+          return {
+            progress: prevState.progress + 1
+          }
+        })
+      }
+    })
+  }
 }
 
 const clearScreenOp = '\x1B[2J\x1B[0f'
