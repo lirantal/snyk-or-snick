@@ -3,14 +3,14 @@
   "version": "0.0.0-development",
   "description": "Race your friend to the Snyk palace",
   "bin": {
-    "snyk-or-snik": "./bin/index.js"
+    "snyk-or-snick": "./bin/app.js"
   },
   "engines": {
     "node": ">=8.0.0"
   },
   "scripts": {
     "build": "babel src --out-dir bin/ --ignore __tests__",
-    "lint": "eslint . && npm run lint:lockfile",
+    "lint": "eslint src/** && npm run lint:lockfile",
     "lint:lockfile": "lockfile-lint --path package-lock.json --type npm --validate-https --allowed-hosts npm yarn",
     "lint:fix": "eslint . --fix",
     "format": "prettier --config .prettierrc.js --write '**/*.js'",
@@ -24,6 +24,10 @@
     "email": "liran.tal@gmail.com",
     "url": "https://github.com/lirantal"
   },
+  "files": [
+    "src/app.js",
+    "bin/app.js"
+  ],
   "license": "Apache-2.0",
   "keywords": [
     "snyk",
@@ -39,7 +43,6 @@
     "url": "https://github.com/lirantal/snyk-or-snick.git"
   },
   "dependencies": {
-    "@babel/preset-env": "^7.8.4",
     "ink": "^2.7.0",
     "ink-progress-bar": "^3.0.0",
     "react": "^16.12.0"
@@ -48,6 +51,7 @@
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.4",
     "@babel/node": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
     "@babel/preset-react": "^7.8.3",
     "@commitlint/cli": "^7.2.1",
     "@commitlint/config-conventional": "^7.1.2",
@@ -68,6 +72,7 @@
     "eslint-plugin-jest": "^22.7.2",
     "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.18.3",
     "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-standard": "^4.0.0",
     "husky": "^3.0.0",
@@ -154,6 +159,7 @@
     },
     "plugins": [
       "import",
+      "react",
       "standard",
       "node",
       "security",
@@ -169,6 +175,7 @@
       "jest/no-focused-tests": "error",
       "jest/no-identical-title": "error",
       "node/no-unsupported-features": "off",
+      "node/no-unsupported-features/es-syntax": "off",
       "node/no-unpublished-require": "off",
       "security/detect-non-literal-fs-filename": "error",
       "security/detect-unsafe-regex": "error",
@@ -182,12 +189,15 @@
       "security/detect-possible-timing-attacks": "error",
       "security/detect-pseudoRandomBytes": "error",
       "space-before-function-paren": "off",
-      "object-curly-spacing": "off"
+      "object-curly-spacing": "off",
+      "react/jsx-uses-vars": "error"
     },
     "parserOptions": {
+      "sourceType": "module",
       "ecmaVersion": 8,
       "ecmaFeatures": {
-        "impliedStrict": true
+        "impliedStrict": true,
+        "jsx": true
       }
     }
   },

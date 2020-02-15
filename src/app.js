@@ -19,15 +19,15 @@ class App extends React.Component {
 
     return (
       <>
-        <Color magenta>{player1Name}</Color>
+        <Color blue>{player1Name}</Color>
 
-        <Color magenta>
+        <Color blue>
           <ProgressBar left={player1Name.length} percent={this.state.player1Progress / 100} />
         </Color>
 
-        <Color cyan>{player2Name}</Color>
+        <Color green>{player2Name}</Color>
 
-        <Color cyan>
+        <Color green>
           <ProgressBar left={player2Name.length} percent={this.state.player2Progress / 100} />
         </Color>
       </>
@@ -42,7 +42,7 @@ class App extends React.Component {
       if (data.ctrl && data.name === 'c') {
         process.exit()
       } else {
-        if (key === 'a') {
+        if (key === 's') {
           this.setState(prevState => {
             if (prevState.player1Progress >= 100) {
               console.log('Snyk wins!')
