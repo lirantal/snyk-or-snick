@@ -77,4 +77,4 @@ workflows:
               only:
                 - master
           requires:
-            - test-lint
+            - lint
