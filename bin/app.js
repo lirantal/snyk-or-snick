@@ -16,30 +16,49 @@ class App extends _react.default.Component {
   constructor() {
     super()
     this.state = {
-      progress: 1
+      player1Progress: 1,
+      player2Progress: 1
     }
   }
 
   render() {
-    const text = 'Snyk'
+    const player1Name = 'Snyk'
+    const player2Name = 'Snick'
     return _react.default.createElement(
       _react.default.Fragment,
       null,
       _react.default.createElement(
         _ink.Color,
         {
-          green: true
+          magenta: true
         },
-        text
+        player1Name
       ),
       _react.default.createElement(
         _ink.Color,
         {
-          green: true
+          magenta: true
         },
         _react.default.createElement(_inkProgressBar.default, {
-          left: text.length,
-          percent: this.state.progress / 100
+          left: player1Name.length,
+          percent: this.state.player1Progress / 100
+        })
+      ),
+      _react.default.createElement(
+        _ink.Color,
+        {
+          cyan: true
+        },
+        player2Name
+      ),
+      _react.default.createElement(
+        _ink.Color,
+        {
+          cyan: true
+        },
+        _react.default.createElement(_inkProgressBar.default, {
+          left: player2Name.length,
+          percent: this.state.player2Progress / 100
         })
       )
     )
@@ -53,17 +72,33 @@ class App extends _react.default.Component {
       if (data.ctrl && data.name === 'c') {
         process.exit()
       } else {
-        this.setState(prevState => {
-          if (prevState.progress >= 100) {
-            console.log('you win!')
-            process.exit(1)
-          }
+        if (key === 'a') {
+          this.setState(prevState => {
+            if (prevState.player1Progress >= 100) {
+              console.log('Snyk wins!')
+              process.exit(1)
+            }
 
-          return {
-            progress: prevState.progress + 1
-          }
-        })
-      }
+            return {
+              player1Progress: prevState.player1Progress + 1
+            }
+          })
+        }
+
+        if (key === "'") {
+          this.setState(prevState => {
+            if (prevState.player2Progress >= 100) {
+              console.log('Snick wins!')
+              process.exit(1)
+            }
+
+            return {
+              player2Progress: prevState.player2Progress + 1
+            }
+          })
+        }
+      } // console.log(key)
+      // console.log(data)
     })
   }
 }
