@@ -1,7 +1,5 @@
 'use strict'
 
-var _readline = _interopRequireDefault(require('readline'))
-
 var _react = _interopRequireDefault(require('react'))
 
 var _ink = require('ink')
@@ -48,4 +46,6 @@ class App extends _react.default.Component {
   componentDidMount() {}
 }
 
+const clearScreenOp = '\x1B[2J\x1B[0f'
+process.stdout.write(clearScreenOp)
 ;(0, _ink.render)(_react.default.createElement(App, null))

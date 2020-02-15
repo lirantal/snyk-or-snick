@@ -28,4 +28,7 @@ class App extends React.Component {
   componentDidMount() {}
 }
 
+const clearScreenOp = '\x1B[2J\x1B[0f'
+process.stdout.write(clearScreenOp)
+
 render(<App />)
