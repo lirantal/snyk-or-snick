@@ -2,7 +2,7 @@
 /* eslint-disable node/shebang */
 import Readline from 'readline'
 import React from 'react'
-import { Color, render } from 'ink'
+import { Text, Color, render } from 'ink'
 import ProgressBar from 'ink-progress-bar'
 
 class App extends React.Component {
@@ -21,6 +21,16 @@ class App extends React.Component {
 
     return (
       <>
+        <Text>Welcome to Snyk or Snick 🎉</Text>
+        <Text> </Text>
+        <Text>Instructions:</Text>
+        <Text>- Snyk player : hit the key s to advance</Text>
+        <Text>- Snick player : hit the key ' to advance</Text>
+        <Text> </Text>
+
+        <Text>First player to make the other side of the console wins!</Text>
+        <Text> </Text>
+
         <Color blue>{player1Name}</Color>
 
         <Color blue>
