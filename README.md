@@ -41,6 +41,19 @@ npx snyk-or-snick
 
 Press the keys like a mad-man until you hit 100% progress and win the right pronunciation 🎉
 
+## Tip
+
+I specifically built this game around a [Webee keyboard](https://shop-il.webee-world.com/) that I bought for my son, so if you have one you can just plug it in to the USB port and start playing with the keys:
+
+![](https://cdn.azrieli.com/Images/7b243d93-082f-405c-823f-050c9e5c5f7f/Normal/5db80ce7.jpg)
+
+image source from Azireli website: https://www.azrieli.com/o/7b243d93-082f-405c-823f-050c9e5c5f7f
+
+## Gameplay
+
+Father and son quality time video: https://twitter.com/liran_tal/status/1228784306522292225?s=20
+
+
 # Contributing
 
 Please consult [CONTRIBUTING](./CONTRIBUTING.md) for guidelines on contributing to this project.
