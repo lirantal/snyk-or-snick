@@ -44,7 +44,7 @@
     "url": "https://github.com/lirantal/snyk-or-snick.git"
   },
   "dependencies": {
-    "ink": "^2.7.0",
+    "ink": "^3.0.9",
     "ink-progress-bar": "^3.0.0",
     "react": "^16.12.0"
   },
