@@ -46,7 +46,7 @@
   "dependencies": {
     "ink": "^3.0.0",
     "ink-progress-bar": "^3.0.0",
-    "react": "^16.12.0"
+    "react": "^17.0.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
