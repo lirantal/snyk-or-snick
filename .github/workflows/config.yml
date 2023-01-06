@@ -25,11 +25,6 @@ jobs:
       #   with:
       #     name: node_modules
       #     path: ./node_modules
-      - uses: actions/cache@v3
-        if: success()
-        with:
-          path: ./node_modules
-          key: dependency-cache-{{ checksum "package-lock.json" }}
 
   lint:
     runs-on: ubuntu-latest
