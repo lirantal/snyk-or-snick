@@ -25,7 +25,7 @@ jobs:
       #   with:
       #     name: node_modules
       #     path: ./node_modules
-      - uses: actions/cache@v2
+      - uses: actions/cache@v3
         if: success()
         with:
           path: ./node_modules
