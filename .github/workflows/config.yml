@@ -17,7 +17,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           cache: 'npm'
-      - run: npm install --ignore-engines
+      - run: npm ci
       - run: npm run build
 
   lint:
@@ -27,6 +27,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           cache: 'npm'
+      - run: npm ci
       - run: npm run lint
 
   release:
@@ -37,4 +38,5 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           cache: 'npm'
+      - run: npm ci
       - run: npm run semantic-release
