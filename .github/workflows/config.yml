@@ -14,37 +14,29 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - id: cache
-        uses: actions/cache@v3
+      - uses: actions/setup-node@v3
         with:
-          path: ./node_modules
-          key: dependency-cache-{{ checksum "package-lock.json" }}
-      - run: npm install --ignore-engines
+          cache: 'npm'
+      - run: npm ci
       - run: npm run build
-      # - uses: actions/upload-artifact@v2
-      #   with:
-      #     name: node_modules
-      #     path: ./node_modules
 
   lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - id: cache
-        uses: actions/cache@v3
+      - uses: actions/setup-node@v3
         with:
-          path: ./node_modules
-          key: dependency-cache-{{ checksum "package-lock.json" }}
+          cache: 'npm'
+      - run: npm ci
       - run: npm run lint
 
   release:
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     steps:
-      - uses: actions/checkout@v2
-      - id: cache
-        uses: actions/cache@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          path: ./node_modules
-          key: dependency-cache-{{ checksum "package-lock.json" }}
+          cache: 'npm'
+      - run: npm ci
       - run: npm run semantic-release
