@@ -2,7 +2,7 @@
 /* eslint-disable node/shebang */
 import Readline from 'readline'
 import React from 'react'
-import { Text, Color, render } from 'ink'
+import { Text, render } from 'ink'
 import ProgressBar from 'ink-progress-bar'
 
 class App extends React.Component {
@@ -31,17 +31,17 @@ class App extends React.Component {
         <Text>First player to make the other side of the console wins!</Text>
         <Text> </Text>
 
-        <Color blue>{player1Name}</Color>
+        <Text color="blue">{player1Name}</Text>
 
-        <Color blue>
+        <Text color="blue">
           <ProgressBar left={player1Name.length} percent={this.state.player1Progress / 100} />
-        </Color>
+        </Text>
 
-        <Color green>{player2Name}</Color>
+        <Text color="green">{player2Name}</Text>
 
-        <Color green>
+        <Text color="green">
           <ProgressBar left={player2Name.length} percent={this.state.player2Progress / 100} />
-        </Color>
+        </Text>
       </>
     )
   }
