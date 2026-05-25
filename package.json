@@ -82,7 +82,7 @@
     "lockfile-lint": "^5.0.0",
     "open-cli": "^5.0.0",
     "prettier": "^1.18.2",
-    "semantic-release": "^25.0.3"
+    "semantic-release": "25.0.3"
   },
   "babel": {
     "presets": [
