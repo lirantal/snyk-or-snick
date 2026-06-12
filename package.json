@@ -6,7 +6,8 @@
     "snyk-or-snick": "./bin/app.js"
   },
   "engines": {
-    "node": ">=8.0.0"
+    "npm": ">=11.10.0",
+    "node": ">=24.0.0"
   },
   "scripts": {
     "build": "babel src --out-dir bin/ --ignore __tests__",
